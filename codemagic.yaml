@@ -11,3 +11,6 @@ workflows:
       - flutter build ipa --release
     artifacts:
       - build/ios/ipa/*.ipa
+    cache:
+      cache_paths:
+      - $FLUTTER_ROOT/.pub-cache
