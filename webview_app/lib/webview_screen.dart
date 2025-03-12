@@ -64,7 +64,7 @@ class WebViewScreenState extends State<WebViewScreen> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text('Intranet Lucky', style: TextStyle(color: Colors.white)),
+            const Text('Intranet Grupo Lucky', style: TextStyle(color: Colors.white)),
             IconButton(
               onPressed: _reloadPage,
               icon: const Icon(Icons.refresh, color: Colors.white),
