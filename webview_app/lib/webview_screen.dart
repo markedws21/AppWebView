@@ -60,17 +60,33 @@ class WebViewScreenState extends State<WebViewScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: const Color(0xFF1A1E2B),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text('Intranet Grupo Lucky', style: TextStyle(color: Colors.white)),
-            IconButton(
-              onPressed: _reloadPage,
-              icon: const Icon(Icons.refresh, color: Colors.white),
-            )
-          ],
-        ),
+            Row(
+              children: [
+                SizedBox(
+                width: 30,
+                height: 30,
+                child: Image.asset(
+                  'assets/icon/luckyup.png',
+                  fit: BoxFit.contain,
+                ),
+                ),
+                const SizedBox(width: 8),
+                const Text(
+                'Intranet Lucky',
+                style: TextStyle(color: Colors.white),
+                ),
+            ],
+          ),
+          IconButton(
+            onPressed: _reloadPage,
+            icon: const Icon(Icons.refresh, color: Colors.white),
+          ),
+        ],
+      ),
       ),
       body: RefreshIndicator(
         onRefresh: isAtTop ? _reloadPage : () async {},
